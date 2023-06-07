@@ -19,7 +19,8 @@ router.post("/bookcar", async (req, res) => {
         amount: req.body.totalAmount * 100,
         currency: "inr",
         customer: customer.id,
-        receipt_email: token.email
+        receipt_email: token.email,
+        description: 'Software development services'
       },
       {
         idempotencyKey: uuidv4(),
